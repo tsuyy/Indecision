@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "homepage": "https://tsuyy.github.io/indecision",
   "scripts": {
     "serve": "live-server public/",
     "build": "webpack",
-    "dev-server": "webpack-dev-server"
+    "dev-server": "webpack-dev-server",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "babel-cli": "6.24.1",
@@ -16,6 +19,7 @@
     "babel-preset-env": "1.5.2",
     "babel-preset-react": "6.24.1",
     "css-loader": "^0.28.11",
+    "gh-pages": "^1.1.0",
     "live-server": "^1.2.0",
     "node-sass": "^4.7.2",
     "normalize.css": "^8.0.0",
